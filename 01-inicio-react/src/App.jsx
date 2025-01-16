@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Hijo from "./components/parametros/Hijo"
 import Padre from "./components/parametros/Padre"
+import Saludo from "./components/useEffect/Saludo";
+import ProductList from "./components/useEffectFetching/ProductList";
 
 const initialStateInfo= {nombre:"Rocio", edad:15, isAdmin:false};
 
@@ -33,14 +35,18 @@ const App = () => {
       <ContadorDoble/>
     </div>
   </div> */}
-
+{/* 
   <p>El nombre es: {info.nombre}</p>
   <p>La edad es: {info.edad}</p>
   <Padre info={ info } setInfo={ setInfo } handleClickEdad={handleClickEdad} >
 
     <Hijo info={info} handleClickEdad={handleClickEdad}/>
 
-  </Padre>
+  </Padre> */}
+
+  {/* <Saludo/> */}
+
+  <ProductList/>
 
 
   </>

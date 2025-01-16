@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "titulo": "JavaScript: The Definitive Guide",
+      "precio": 45.99,
+      "tags": ["JavaScript", "Web Development", "Frontend"],
+      "img": "https://example.com/js-definitive-guide.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Python Crash Course",
+      "precio": 39.99,
+      "tags": ["Python", "Data Science", "Backend"],
+      "img": "https://example.com/python-crash-course.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Learning PHP, MySQL & JavaScript",
+      "precio": 49.99,
+      "tags": ["PHP", "JavaScript", "MySQL", "Fullstack"],
+      "img": "https://example.com/learning-php-mysql-js.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "C# 9.0 in a Nutshell",
+      "precio": 54.99,
+      "tags": ["C#", "DotNet", "Backend"],
+      "img": "https://example.com/csharp-nutshell.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "You Don't Know JS Yet",
+      "precio": 29.99,
+      "tags": ["JavaScript", "Web Development", "Programming"],
+      "img": "https://example.com/you-dont-know-js.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Effective Java",
+      "precio": 59.99,
+      "tags": ["Java", "Programming", "Backend"],
+      "img": "https://example.com/effective-java.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "Go Programming Language",
+      "precio": 44.99,
+      "tags": ["Go", "Backend", "Systems Programming"],
+      "img": "https://example.com/go-programming-language.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "Rust Programming by Example",
+      "precio": 34.99,
+      "tags": ["Rust", "Systems Programming", "Performance"],
+      "img": "https://example.com/rust-programming-example.jpg"
+    },
+    {
+      "id": 9,
+      "titulo": "Eloquent Ruby",
+      "precio": 39.99,
+      "tags": ["Ruby", "Backend", "Programming"],
+      "img": "https://example.com/eloquent-ruby.jpg"
+    },
+    {
+      "id": 10,
+      "titulo": "Pro TypeScript",
+      "precio": 49.99,
+      "tags": ["TypeScript", "JavaScript", "Web Development"],
+      "img": "https://example.com/pro-typescript.jpg"
+    }
+  ]
+  

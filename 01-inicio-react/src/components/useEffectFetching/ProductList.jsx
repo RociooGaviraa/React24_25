@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import LiCartProduct from "./LiCartProduct";
 
 const ProductList = () => {
-    const [product, setProducts] = useState([]);
+    const [product, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
     const [totalCarrito, setTotalCarrito] = useState(0);
 

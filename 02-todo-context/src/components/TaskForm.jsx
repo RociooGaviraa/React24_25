@@ -16,7 +16,7 @@ const TaskForm = () => {
         title: taskName,
         completed: false,
       });
-      setTaskName("");
+      setTaskName("");//limpia el campo de texto
     }
   };
   return (
@@ -27,13 +27,13 @@ const TaskForm = () => {
       <h2 className="text-xl font-bold mb-4">Agregar Tarea</h2>
       <input
         type="text"
-        value={taskName}
-        onChange={(e) => setTaskName(e.target.value)}
+        value={taskName} //A donde va a apuntar este input
+        onChange={(e) => setTaskName(e.target.value)}//cada vez que haga un onchange va a setear
         placeholder="Nombre de la tarea"
         className="w-full p-2 mb-4 border border-gray-300 rounded-lg"
       />
       <button
-        type="submit"
+        type="submit" //añade la tarea
         className="px-4 py-2 bg-blue-500 text-white rounded-lg"
       >
         Agregar

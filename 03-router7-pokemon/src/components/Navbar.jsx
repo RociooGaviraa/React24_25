@@ -27,11 +27,11 @@ const Navbar = () => {
                 className="text-white text-2xl font-bold">
                     Buscar
                 </NavLink>
-                <NavLink 
+                {/* <NavLink 
                 to={ROUTES.POKEMON_DETAIL} 
                 className="text-white text-2xl font-bold">
                     Detalles
-                </NavLink>
+                </NavLink> */}
                 <NavLink 
                 to={ROUTES.FAVORITES} 
                 className="text-white text-2xl font-bold">

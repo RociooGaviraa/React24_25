@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../routes/path';
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -41,12 +43,24 @@ const Home = () => {
             key={pokemon.id} 
             className='bg-white rounded-xq p-6 hover:shadow-sm'
             >
-              <div className=''>
+              <div className='relative group'>
                 <img 
                 className = "mx-auto"
                 src={pokemon.sprites.front_default} 
                 alt={pokemon.name}/>
-                <h2 className="text-xl font-bold text-center mt-4">{pokemon.name}</h2>
+                <h2 className="text-xl font-bold text-center mt-4">
+                  {pokemon.name}
+                </h2>
+                <div className='flex justify-center space-x-2 mt-4'>
+                  <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-slate-900">
+                    Añadir a favoritos
+                  </button>
+                  {/* Voy a ir a ver todos los detalles usando elementos de react router */}
+                  <Link className="bg-green-500 text-white px-4 py-2 rounded hover:bg-slate-900"
+                  to={`${ROUTES.SEARCH}/${pokemon.name}`}>
+                    Ver Detalles
+                  </Link>
+                </div>
               </div>
             </div>
           ))

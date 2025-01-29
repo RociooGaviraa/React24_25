@@ -9,6 +9,5 @@ createRoot(document.getElementById('root')).render(
     <PokemonProvider>
       <App/>
     </PokemonProvider>
-    <App />
   </StrictMode>,
 )

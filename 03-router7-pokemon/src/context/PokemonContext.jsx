@@ -9,14 +9,19 @@ export function PokemonProvider({ children }) {
     const [favorites, setFavorites] = useState([]);
     
     const addToFavorites = (pokemon)=> {
+        //verificamos ya esta en favoritos
+        if(favorites.some (poke => poke.id === pokemon.id)){
+            //Lanzamos error con sonner
+            return;
+        }
+        //Sino esta repetido lo agrego
+        setFavorites((preFavoritos)=>[...preFavoritos, pokemon]);
     };
 
     const removeFromFavorites = (pokemonId)=> {
     };
 
-
     //funcionalidades del provider
-
 
     return(
         <PokemonContext.Provider value={{}}>

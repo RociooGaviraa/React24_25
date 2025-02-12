@@ -8,11 +8,11 @@ export const SIZE = {
     ORIGINAL: "original",
 }
 
-//funcion para hacer fetch a lla API, opciones
+//funcion para hacer fetch a la API, opciones
 const fetchFromAPI = async (endpoint, options = {}) => {
-    try{ 
+    try{
         const response = await fetch(
-            `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=es-ES`
+            `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=es-ES&${new URLSearchParams(options)}`
         );
         if(!response.ok){
             throw new Error("Error en la petición a la API");
@@ -30,11 +30,15 @@ const fetchFromAPI = async (endpoint, options = {}) => {
 export const getPopularMovies = async () => {
     return await fetchFromAPI("/movie/popular");
 };
-
+//funcion para obtener las peliculas por su id
 export const getMovieDetails = async (id) => {
     return await fetchFromAPI(`/movie/${id}`);
 };
-
+//funcion para obtener las imagenes de las peliculas
+export const getImageURL = (path, size = SIZE.POSTER) => {
+    return `${BASE_IMAGE_URL}/${size}${path}`;
+};
+//funcion para obtener las peliculas con video por su id
 export const getMovieVideos = async (id) => {
     return await fetchFromAPI(`/movie/${id}/videos`);
 };

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useFetch } from "../hooks/useFetch";
 import { getMovieDetails } from "../services/tmdb";
 import GridLoader from "../components/LoadingSpinner";
-import { getImageURL } from "../services/tmdb";
+import { getImageURL  } from "../services/tmdb";
 
 
 const MovieDetail = () => {
@@ -45,21 +45,22 @@ const MovieDetail = () => {
           <img src={getImageURL(data?.poster_path)} alt={data?.title}
           className="w-full rounded-lg mb-10"/>
         </div>
+        {/*  */}
         <div className="md:col-span-2 space-y-6">
           <div className="flex item gap-4 text-sm text-gray-700">
           <span className="font-bold mt-4">
-            {data?.release_date?.split('-')[0]}
+            {data?.release_date.split("-")[0]}
           </span>
           <span className="font-bold mt-4">
             {data?.runtime} min
           </span>
           <span className="font-bold mt-4">
-            {Number(data?.vote_average).toFixed(1)} ⭐ 
+            {Number(data?.vote_average).toFixed(1)}⭐
           </span>
           </div>
 {/* SEGUNDA COLUMNA */}
           <section>
-            generos
+            generos {data.id}
           </section>
           <section>
             <h2 className="text-2xl font-bold mb-8">
@@ -68,6 +69,9 @@ const MovieDetail = () => {
             <p>
               {data?.overview}
             </p>
+          </section>
+          <section>
+            sección de vídeos
           </section>
         </div>
       </section>

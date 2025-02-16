@@ -17,8 +17,8 @@ const fetchFromAPI = async (endpoint, options = {}) => {
         if(!response.ok){
             throw new Error("Error en la petición a la API");
         }
-        const { results } = await response.json();
-        return results;
+        const data = await response.json();
+        return data;
 
     }catch(error){   
         console.error(error);
@@ -27,8 +27,8 @@ const fetchFromAPI = async (endpoint, options = {}) => {
 };
 
 //funcion para obtener las peliculas populares/favoritas
-export const getPopularMovies = async () => {
-    return await fetchFromAPI("/movie/popular");
+export const getPopularMovies = async (page=1) => {
+    return await fetchFromAPI("/movie/popular", {page});
 };
 //funcion para obtener las peliculas por su id
 export const getMovieDetails = async (id) => {
